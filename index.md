@@ -1,4 +1,4 @@
-<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+<meta content="application/json; charset=utf-8" http-equiv="Content-Type">
 <meta content="utf-8" http-equiv="encoding">
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="test.js"></script>
