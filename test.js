@@ -21,12 +21,7 @@ async function get_data() {
     });
 
     data_objs.map(x => x.string = `${x.name}: ${x.rating}`)
-
-    let sub_two_k = data_objs.filter(x => x.rating < limit)
-    let over_two_k = data_objs.filter(x => x.rating >= limit)
-
-    document.getElementById('player_data_div').innerHTML = over_two_k.map(x => x.string).join('<br>')
-    document.getElementById('player_data_div_sub_2k').innerHTML = sub_two_k.map(x => x.string).join('<br>')
+    document.getElementById('player_data_div').innerHTML  = data_objs.map(x => x.string).join(',')
 
 }
 //
