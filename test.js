@@ -17,8 +17,6 @@ async function get_data() {
     let promises = data_objs.map(obj => axios.get(`https://aoe2.net/api/player/ratinghistory?game=aoe2de&leaderboard_id=3&steam_id=${obj.id}&count=1`).then(res => obj.rating = res.data[0].rating ))
     await Promise.all(promises)
 
-	document.getElementsByClassName("view").destroy()
-
     data_objs = data_objs.sort(function (a, b) {
         return parseInt(b.rating) - parseInt(a.rating)
     });
